@@ -1,0 +1,16 @@
+# Railway deployment will auto-detect most settings
+# This file provides additional configuration options
+
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "npm run start:prod"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 300
+restartPolicyType = "always"
+
+[env]
+NODE_ENV = "production"
+PORT = "3001"
+# Set JWT_SECRET in Railway dashboard as a secret variable

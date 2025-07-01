@@ -1,0 +1,97 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "johndoe@gmail.com",
+      "name": "John Doe",
+      "password": "$2b$10$sdJSYKaimtACza88u8qs4ubHiD20iWWxldwKh7YghyqwGUPk2J4si",
+      "created_at": "2025-07-01T10:40:04.144Z"
+    }
+  ],
+  "donations": [
+    {
+      "id": 2,
+      "user_id": 1,
+      "organization": "Animal Sanctuary Fund",
+      "amount": 200,
+      "date": "2025-07-01",
+      "notes": "Monthly donation",
+      "created_at": "2025-07-01T10:40:04.144Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "organization": "Wildlife Protection Org",
+      "amount": 150,
+      "date": "2025-06-01",
+      "notes": "One-time donation",
+      "created_at": "2025-07-01T10:40:04.144Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "organization": "Farm Animal Welfare",
+      "amount": 100,
+      "date": "2025-06-01",
+      "notes": "Monthly donation",
+      "created_at": "2025-07-01T10:40:04.144Z"
+    }
+  ],
+  "conversions": [
+    {
+      "id": 5,
+      "user_id": 1,
+      "person_name": "Alice Smith",
+      "conversion_date": "2025-06-01",
+      "influence_type": "Documentary sharing",
+      "notes": "Showed Dominion documentary",
+      "created_at": "2025-07-01T10:40:04.144Z"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "person_name": "Bob Johnson",
+      "conversion_date": "2025-06-01",
+      "influence_type": "Restaurant visit",
+      "notes": "Took to vegan restaurant",
+      "created_at": "2025-07-01T10:40:04.144Z"
+    }
+  ],
+  "media": [
+    {
+      "id": 7,
+      "user_id": 1,
+      "platform": "Facebook",
+      "content_type": "Video",
+      "reach_estimate": 500,
+      "date": "2025-07-01",
+      "url": "",
+      "notes": "Farm animal video",
+      "created_at": "2025-07-01T10:40:04.144Z"
+    },
+    {
+      "id": 8,
+      "user_id": 1,
+      "platform": "Instagram",
+      "content_type": "Story",
+      "reach_estimate": 200,
+      "date": "2025-07-01",
+      "url": "",
+      "notes": "Vegan meal photo",
+      "created_at": "2025-07-01T10:40:04.144Z"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": 9,
+      "user_id": 1,
+      "campaign_name": "Factory Farm Ban",
+      "organization": "Animal Justice League",
+      "participation_type": "Petition signing",
+      "date": "2025-06-01",
+      "impact_description": "Helped gather 1000 signatures",
+      "created_at": "2025-07-01T10:40:04.144Z"
+    }
+  ],
+  "lastId": 9
+}

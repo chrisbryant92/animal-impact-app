@@ -1,0 +1,54 @@
+{
+  "name": "animal-impact-app",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run db:init && concurrently \"bun --watch server.ts\" \"vite\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "bun run server.ts",
+    "server:dev": "bun --watch server.ts",
+    "frontend:dev": "vite",
+    "start": "NODE_ENV=production bun run db:init && bun run server.ts",
+    "start:prod": "NODE_ENV=production bun run server.ts",
+    "deploy:build": "bun run build && bun run db:init",
+    "db:init": "bun run database.ts",
+    "db:reset": "rm -f animal_impact.db && bun run db:init",
+    "test:api": "curl -s http://localhost:3001/api/health",
+    "postinstall": "npm run build && npm run db:init"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/bcryptjs": "^3.0.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/sqlite3": "^5.1.0",
+    "@vitejs/plugin-react": "^4.6.0",
+    "autoprefixer": "^10.4.21",
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^12.2.0",
+    "concurrently": "^9.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "postcss": "^8.5.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.3",
+    "sqlite3": "^5.1.7",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.0.0"
+  }
+}
