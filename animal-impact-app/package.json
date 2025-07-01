@@ -15,8 +15,7 @@
     "deploy:build": "bun run build && bun run db:init",
     "db:init": "bun run database.ts",
     "db:reset": "rm -f animal_impact.db && bun run db:init",
-    "test:api": "curl -s http://localhost:3001/api/health",
-    "postinstall": "npm run build && npm run db:init"
+    "test:api": "curl -s http://localhost:3001/api/health"
   },
   "devDependencies": {
     "@types/bun": "latest"
@@ -36,7 +35,7 @@
     "@vitejs/plugin-react": "^4.6.0",
     "autoprefixer": "^10.4.21",
     "bcryptjs": "^3.0.2",
-    "better-sqlite3": "^12.2.0",
+
     "concurrently": "^9.2.0",
     "cors": "^2.8.5",
     "dotenv": "^17.0.0",
